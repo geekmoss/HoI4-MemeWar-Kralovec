@@ -1,0 +1,14 @@
+characters={
+	KRL_meme_war_junta= {
+		name="Council of MemeWar"
+		portraits = {
+			civilian = {
+				large="GFX_portrait_KRL_MemeWarJunta"
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			id=-1
+		}
+	}
+}
