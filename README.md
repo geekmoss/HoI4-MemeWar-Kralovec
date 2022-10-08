@@ -2,9 +2,11 @@
 
 A mod for Hearts of Iron 4, inspired by an internet meme that parodied the referendum on annexation to the Russian Federation by the Czechs and Poles annexing Kaliningrad.
 
+[Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2872761198)
+
 #Kralovec #KralovecIsCzechia
 
-![Screenshot of event](https://media.discordapp.net/attachments/729809525644984430/1028311628963385464/unknown.png)
+![Screenshot of event](thumbnail.png)
 
 ## State of mod
 
