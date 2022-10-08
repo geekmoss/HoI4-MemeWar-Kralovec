@@ -4,6 +4,8 @@ A mod for Hearts of Iron 4, inspired by an internet meme that parodied the refer
 
 #Kralovec #KralovecIsCzechia
 
+![Screenshot of event](https://media.discordapp.net/attachments/729809525644984430/1028311628963385464/unknown.png)
+
 ## State of mod
 
 Currently the event has to be called manually via the console with the command `event czech.kralovec.1`.
