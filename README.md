@@ -10,9 +10,9 @@ A mod for Hearts of Iron 4, inspired by an internet meme that parodied the refer
 
 ## State of mod
 
-Currently the event has to be called manually via the console with the command `event czech.kralovec.1`.
+Currently the event has to be called decision for Czechoslovakia.
 
-By starting this event (for CZE) you have three choices:
+By starting this event you have three choices:
 
 - Königsberg will be annexed by Czechoslovakia
 - Königsberg will become the state of Königsberg and will be a puppet of the CZE

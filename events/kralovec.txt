@@ -91,6 +91,7 @@ country_event = {
 		KRL = {
 			transfer_state = 763
 			add_state_core = 763
+			change_tag_from = CZE
 		}
 		CZE = {
 			add_state_core = 763
