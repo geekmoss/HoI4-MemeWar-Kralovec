@@ -26,7 +26,7 @@ When Poland and Czechoslovakia will mutually obtain a non-aggression agreement. 
 - At least a small focus tree referring to memes (for the Královec)
 - The dream would be to bring it into the modern era as a submod of one of the modern mods, to make the whole thing fit better.
     - Novum Vexillum
-    - Millennium Dawn: A Modern Day Mod
+    - ~~Millennium Dawn: A Modern Day Mod~~ (another submod is in progress)
 
 ## Contributing
 
