@@ -21,3 +21,13 @@ krl_kralovec_decision_category = {
 
 	visible_when_empty = no
 }
+
+krl_kralovec_invite_industries_decision_category = {
+	allowed = {
+		original_tag = KRL
+	}
+
+	icon = GFX_decision_generic_form_nation
+
+	visible_when_empty = no
+}

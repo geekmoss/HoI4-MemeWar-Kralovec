@@ -1,0 +1,20 @@
+﻿l_english:
+  # Industry
+  KRL_bratislava_kralovec_corridor:0 "Bratislava-Královec Corridor"
+  KRL_special_line_prague_warsaw_kralovec:0 "Extraordinary line Prague Warsaw Královec"
+  KRL_invite_czechoslovak_bussines:0 "Invite Czechoslovak Bussines"
+  # Science
+  KRL_found_uviversity:0 "Found university of Přemysl Otakar II."
+  KRL_cooperation_program:0 "Cooperation program"
+  KRL_cooperation_vut:0 "Cooperation with VUT"
+  KRL_cooperation_ku:0 "Cooperation with Charles Univesity"
+  KRL_cooperation_cvut:0 "Cooperation with ČVUT"
+  # Army
+  KRL_army_masaryk_legacy:0 "Legacy of Father Masaryk"
+  KRL_army_masaryk_legacy_desc:0 "As our Father say \"Borders are not being discussed, borders are being shot at.\""
+  KRL_found_army_academy:0 "Establish military academy"
+  KRL_army_glory_of_legions:0 "Glory of that Legion"
+  KRL_legionary_bastion:0 "Legionary Bastion"
+  KRL_invite_legionars:0 "Invite legionars"
+  # Navy  
+  KRL_lessons_from_battle_of_baikal:0 "Lesson from battle of Baikal"

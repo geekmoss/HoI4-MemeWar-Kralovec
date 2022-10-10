@@ -1,0 +1,41 @@
+spriteTypes = {
+	spriteType = {
+		name = GFX_idea_KRL_legacy_of_legions
+		texturefile = gfx/interface/ideas/legacy_of_legions.dds
+	}
+
+	spriteType = {
+		name = GFX_idea_KRL_bata
+		texturefile = gfx/interface/ideas/bata.dds
+	}
+
+	spriteType = {
+		name = GFX_idea_KRL_aero
+		texturefile = "gfx/interface/ideas/idea_cze_aero.dds"
+	}
+
+	spriteType = {
+		name = GFX_idea_KRL_ckd
+		texturefile = "gfx/interface/ideas/idea_cze_ckd.dds"
+	}
+
+	spriteType = {
+		name = GFX_idea_KRL_praga
+		texturefile = "gfx/interface/ideas/idea_cze_praga.dds"
+	}
+
+	spriteType = {
+		name = GFX_idea_KRL_tatra
+		texturefile = "gfx/interface/ideas/idea_cze_tatra.dds"
+	}
+
+	spriteType = {
+		name = GFX_idea_KRL_zbrojovka
+		texturefile = "gfx/interface/ideas/idea_cze_zbrojovka_brno.dds"
+	}
+
+	spriteType = {
+		name = GFX_idea_KRL_jawa
+		texturefile = "gfx/interface/ideas/jawa.dds"
+	}
+}

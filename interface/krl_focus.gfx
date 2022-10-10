@@ -1,0 +1,11 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_KRL_focus_masaryk_legacy"
+		texturefile = "gfx/interface/goals/focus_KRL_army_masaryk_legacy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_KRL_focus_masaryk_legacy_test"
+		texturefile = "gfx/interface/goals/test.dds"
+	}
+}

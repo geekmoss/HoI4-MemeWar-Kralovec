@@ -10,3 +10,357 @@ cze_kralovec_decision_category = {
 krl_kralovec_decision_category = {
 
 }
+
+krl_kralovec_invite_industries_decision_category = {
+	krl_invite_bata = {
+		visible = {
+			AND = {
+				has_completed_focus = KRL_invite_czechoslovak_bussines
+				NOT = {
+					has_idea = KRL_bata
+				}
+			}
+		}
+		available = {
+			AND = {
+				has_completed_focus = KRL_invite_czechoslovak_bussines
+				NOT = {
+					has_idea = KRL_bata
+				}
+			}
+		}
+
+		#days_remove = 30
+		#days_re_enable = 30
+
+		cost = 50
+
+		remove_effect = {
+			random = {
+				chance = 30
+				KRL = {
+					add_ideas = { KRL_bata }
+					add_political_power = 25
+					add_stability = 0.05
+				}
+				hidden_effect = {
+					country_event = kralovec.4
+				}
+			}
+			hidden_effect = {
+				random = {
+					chance = 70
+					country_event = kralovec.3
+				}
+			}
+		}
+	}
+
+	krl_invite_skoda = {
+		visible = {
+			AND = {
+				has_completed_focus = KRL_invite_czechoslovak_bussines
+				NOT = {
+					has_idea = CZE_skoda_works
+				}
+			}
+		}
+		available = {
+			AND = {
+				has_completed_focus = KRL_invite_czechoslovak_bussines
+				NOT = {
+					has_idea = CZE_skoda_works
+				}
+			}
+		}
+
+		#days_remove = 30
+		#days_re_enable = 30
+
+		cost = 50
+
+		remove_effect = {
+			random = {
+				chance = 30
+				KRL = {
+					add_ideas = { CZE_skoda_works }
+					add_political_power = 25
+					add_stability = 0.05
+				}
+				hidden_effect = {
+					country_event = kralovec.2
+				}
+			}
+			hidden_effect = {
+				random = {
+					chance = 70
+					country_event = kralovec.1
+				}
+			}
+		}
+	}
+
+	krl_invite_ckd = {
+		visible = {
+			AND = {
+				has_completed_focus = KRL_invite_czechoslovak_bussines
+				NOT = {
+					has_idea = KRL_ckd
+				}
+			}
+		}
+		available = {
+			AND = {
+				has_completed_focus = KRL_invite_czechoslovak_bussines
+				NOT = {
+					has_idea = KRL_ckd
+				}
+			}
+		}
+
+		#days_remove = 30
+		#days_re_enable = 30
+
+		cost = 50
+
+		remove_effect = {
+			random = {
+				chance = 30
+				KRL = {
+					add_ideas = { KRL_ckd }
+					add_political_power = 25
+					add_stability = 0.05
+				}
+				hidden_effect = {
+					country_event = kralovec.6
+				}
+			}
+			hidden_effect = {
+				random = {
+					chance = 70
+					country_event = kralovec.5
+				}
+			}
+		}
+	}
+
+	krl_invite_jawa = {
+		visible = {
+			AND = {
+				has_completed_focus = KRL_invite_czechoslovak_bussines
+				NOT = {
+					has_idea = KRL_jawa
+				}
+			}
+		}
+		available = {
+			AND = {
+				has_completed_focus = KRL_invite_czechoslovak_bussines
+				NOT = {
+					has_idea = KRL_jawa
+				}
+			}
+		}
+
+		#days_remove = 30
+		#days_re_enable = 30
+
+		cost = 50
+
+		remove_effect = {
+			random = {
+				chance = 30
+				KRL = {
+					add_ideas = { KRL_jawa }
+					add_political_power = 25
+					add_stability = 0.05
+				}
+				hidden_effect = {
+					country_event = kralovec.8
+				}
+			}
+			hidden_effect = {
+				random = {
+					chance = 70
+					country_event = kralovec.7
+				}
+			}
+		}
+	}
+
+	krl_invite_aero = {
+		visible = {
+			AND = {
+				has_completed_focus = KRL_invite_czechoslovak_bussines
+				NOT = {
+					has_idea = KRL_aero
+				}
+			}
+		}
+		available = {
+			AND = {
+				has_completed_focus = KRL_invite_czechoslovak_bussines
+				NOT = {
+					has_idea = KRL_aero
+				}
+			}
+		}
+
+		#days_remove = 30
+		#days_re_enable = 30
+
+		cost = 50
+
+		remove_effect = {
+			random = {
+				chance = 30
+				KRL = {
+					add_ideas = { KRL_aero }
+					add_political_power = 25
+					add_stability = 0.05
+				}
+				hidden_effect = {
+					country_event = kralovec.14
+				}
+			}
+			hidden_effect = {
+				random = {
+					chance = 70
+					country_event = kralovec.13
+				}
+			}
+		}
+	}
+
+	krl_invite_praga = {
+		visible = {
+			AND = {
+				has_completed_focus = KRL_invite_czechoslovak_bussines
+				NOT = {
+					has_idea = KRL_praga
+				}
+			}
+		}
+		available = {
+			AND = {
+				has_completed_focus = KRL_invite_czechoslovak_bussines
+				NOT = {
+					has_idea = KRL_praga
+				}
+			}
+		}
+
+		#days_remove = 30
+		#days_re_enable = 30
+
+		cost = 50
+		
+		remove_effect = {
+			random = {
+				chance = 30
+				KRL = {
+					add_ideas = { KRL_praga }
+					add_political_power = 25
+					add_stability = 0.05
+				}
+				hidden_effect = {
+					country_event = kralovec.12
+				}
+			}
+			hidden_effect = {
+				random = {
+					chance = 70
+					country_event = kralovec.11
+				}
+			}
+		}
+	}
+
+	krl_invite_tatra = {
+		visible = {
+			AND = {
+				has_completed_focus = KRL_invite_czechoslovak_bussines
+				NOT = {
+					has_idea = KRL_tatra
+				}
+			}
+		}
+		available = {
+			AND = {
+				has_completed_focus = KRL_invite_czechoslovak_bussines
+				NOT = {
+					has_idea = KRL_tatra
+				}
+			}
+		}
+
+		#days_remove = 30
+		#days_re_enable = 30
+
+		cost = 50
+
+		remove_effect = {
+			random = {
+				chance = 30
+				KRL = {
+					add_ideas = { KRL_tatra }
+					add_political_power = 25
+					add_stability = 0.05
+				}
+				hidden_effect = {
+					country_event = kralovec.16
+				}
+			}
+			hidden_effect = {
+				random = {
+					chance = 70
+					country_event = kralovec.15
+				}
+			}
+		}
+	}
+
+	krl_invite_zbrojovka_brno = {
+		visible = {
+			AND = {
+				has_completed_focus = KRL_invite_czechoslovak_bussines
+				NOT = {
+					has_idea = KRL_zbrojovka
+				}
+			}
+		}
+		available = {
+			AND = {
+				has_completed_focus = KRL_invite_czechoslovak_bussines
+				NOT = {
+					has_idea = KRL_zbrojovka
+				}
+			}
+		}
+
+		#days_remove = 30
+		#days_re_enable = 30
+
+		cost = 50
+
+		remove_effect = {
+			random = {
+				chance = 30
+				KRL = {
+					add_ideas = { KRL_zbrojovka }
+					add_political_power = 25
+					add_stability = 0.05
+				}
+				hidden_effect = {
+					country_event = kralovec.10
+				}
+			}
+			hidden_effect = {
+				random = {
+					chance = 70
+					country_event = kralovec.9
+				}
+			}
+		}
+	}
+}

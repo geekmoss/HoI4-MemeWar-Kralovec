@@ -1,0 +1,140 @@
+ideas = {
+	country = {
+		KRL_legacy_of_legions = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			picture = KRL_idea_legacy_of_legions
+
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.1
+				send_volunteer_divisions_required = -0.90
+			}
+		}
+
+		KRL_bata = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			picture = KRL_idea_bata
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				support_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+		}
+
+		KRL_praga = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			picture = KRL_idea_praga
+
+			removal_cost = -1
+
+			# TODO: Pridat efekty
+		}
+
+		KRL_tatra = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			picture = KRL_idea_tatra
+
+			removal_cost = -1
+
+			# TODO: Pridat efekty
+		}
+
+		KRL_aero = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			picture = KRL_idea_aero
+
+			removal_cost = -1
+
+			# TODO: Pridat efekty
+		}
+
+		KRL_zbrojovka = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			picture = KRL_idea_zbrojovka
+
+			removal_cost = -1
+
+			# TODO: Pridat efekty
+		}
+
+		KRL_jawa = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			picture = KRL_idea_jawa
+
+			removal_cost = -1
+
+			# TODO: Pridat efekty
+		}
+
+		KRL_ckd = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			picture = KRL_idea_ckd
+
+			removal_cost = -1
+
+			# TODO: Pridat efekty
+		}
+	}
+}

@@ -1,115 +1,213 @@
-﻿add_namespace = czech.kralovec
+﻿add_namespace = kralovec
 
+# Škoda refused
 country_event = {
-	id = czech.kralovec.1
-	title = czech.kralovec.1.t
-	desc = czech.kralovec.1.d
-	picture = GFX_report_event_annex_kralovec
+	id = kralovec.1
+	title = kralovec.1.t
+	desc = kralovec.1.d
 
 	is_triggered_only = yes
 
 	option = {
-		name = "Královec is czech, Královec is ours!"
-		ai_chance = { factor = 50 }
-
-		set_province_name = {
-			id = 6332
-			name = "Královec"
-		}
-		hidden_effect = { 763 = { set_state_name = "Královec" } }
-
-		KRL = {
-			add_state_core = 763
-		}
-
-		CZE = {
-			transfer_state = 763
-			add_state_core = 763
-
-			diplomatic_relation = { 
-				country = POL
-				relation = military_access
-				active = yes
-			}
-		}
-
-		POL = {
-			diplomatic_relation = { 
-				country = CZE
-				relation = non_aggression_pact
-				active = yes
-			}
-			transfer_state = 5
-			add_state_core = 5
-		}
+		name = kralovec.decision.invitations.refuse_btn
 	}
+}
+
+# Škoda accepted
+country_event = {
+	id = kralovec.2
+	title = kralovec.1.t
+	desc = kralovec.2.d
+
+	is_triggered_only = yes
 
 	option = {
-		name = "Královec is czech, but give them autonomy"
-		ai_chance = { factor = 50 }
-		
-		set_province_name = {
-			id = 6332
-			name = "Královec"
-		}
-		hidden_effect = { 763 = { set_state_name = "Královec" } }
-
-		KRL = {
-			transfer_state = 763
-			add_state_core = 763
-		}
-		CZE = {
-			puppet = KRL
-			add_state_core = 763
-			diplomatic_relation = { 
-				country = POL
-				relation = military_access
-				active = yes
-			}
-		}
-		POL = {
-			diplomatic_relation = { 
-				country = CZE
-				relation = non_aggression_pact
-				active = yes
-			}
-			transfer_state = 5
-			add_state_core = 5
-		}
+		name = kralovec.decision.invitations.accept_btn
 	}
+}
+
+
+# Baťa refused
+country_event = {
+	id = kralovec.3
+	title = kralovec.3.t
+	desc = kralovec.3.d
+
+	is_triggered_only = yes
 
 	option = {
-		name = "Královec is czech, we are Královec!"
-		ai_chance = { factor = 0 }
+		name = kralovec.decision.invitations.refuse_btn
+	}
+}
 
-		set_province_name = {
-			id = 6332
-			name = "Královec"
-		}
-		hidden_effect = { 763 = { set_state_name = "Královec" } }
+# Baťa accepted
+country_event = {
+	id = kralovec.4
+	title = kralovec.3.t
+	desc = kralovec.4.d
 
-		KRL = {
-			transfer_state = 763
-			add_state_core = 763
-			change_tag_from = CZE
-		}
-		CZE = {
-			add_state_core = 763
-			puppet = KRL
-			diplomatic_relation = { 
-				country = POL
-				relation = military_access
-				active = yes
-			}
-		}
-		POL = {
-			diplomatic_relation = { 
-				country = CZE
-				relation = non_aggression_pact
-				active = yes
-			}
-			transfer_state = 5
-			add_state_core = 5
-		}
+	is_triggered_only = yes
+
+	option = {
+		name = kralovec.decision.invitations.accept_btn
+	}
+}
+
+
+
+# ČKD refused
+country_event = {
+	id = kralovec.5
+	title = kralovec.5.t
+	desc = kralovec.5.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = kralovec.decision.invitations.refuse_btn
+	}
+}
+
+# ČKD accepted
+country_event = {
+	id = kralovec.6
+	title = kralovec.5.t
+	desc = kralovec.6.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = kralovec.decision.invitations.accept_btn
+	}
+}
+
+
+# Jawa refused
+country_event = {
+	id = kralovec.7
+	title = kralovec.7.t
+	desc = kralovec.7.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = kralovec.decision.invitations.refuse_btn
+	}
+}
+
+# Jawa accepted
+country_event = {
+	id = kralovec.8
+	title = kralovec.7.t
+	desc = kralovec.8.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = kralovec.decision.invitations.accept_btn
+	}
+}
+
+# ZB refused
+country_event = {
+	id = kralovec.9
+	title = kralovec.9.t
+	desc = kralovec.9.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = kralovec.decision.invitations.refuse_btn
+	}
+}
+
+# ZB accepted
+country_event = {
+	id = kralovec.10
+	title = kralovec.9.t
+	desc = kralovec.10.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = kralovec.decision.invitations.accept_btn
+	}
+}
+
+# Praga refused
+country_event = {
+	id = kralovec.11
+	title = kralovec.11.t
+	desc = kralovec.11.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = kralovec.decision.invitations.refuse_btn
+	}
+}
+
+# Praga accepted
+country_event = {
+	id = kralovec.12
+	title = kralovec.11.t
+	desc = kralovec.12.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = kralovec.decision.invitations.accept_btn
+	}
+}
+
+# Aerospace refused
+country_event = {
+	id = kralovec.13
+	title = kralovec.13.t
+	desc = kralovec.13.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = kralovec.decision.invitations.refuse_btn
+	}
+}
+
+# Aerospace accepted
+country_event = {
+	id = kralovec.14
+	title = kralovec.13.t
+	desc = kralovec.14.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = kralovec.decision.invitations.accept_btn
+	}
+}
+
+# Tatra refused
+country_event = {
+	id = kralovec.15
+	title = kralovec.15.t
+	desc = kralovec.15.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = kralovec.decision.invitations.refuse_btn
+	}
+}
+
+# Tatra accepted
+country_event = {
+	id = kralovec.16
+	title = kralovec.15.t
+	desc = kralovec.16.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = kralovec.decision.invitations.accept_btn
 	}
 }

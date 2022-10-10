@@ -1,0 +1,343 @@
+﻿focus_tree = {
+	id = kralovec_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = KRL
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1100 }
+
+	#################
+	##   Industry
+	#################
+
+	# Blava-Královec corridor
+	focus = {
+		id = KRL_bratislava_kralovec_corridor
+		icon = GFX_focus_SOV_the_road_of_life
+		x = 2
+		y = 0
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 200			
+		}
+
+		completion_reward = {
+			# Add infrastructures from Prague over Polad to Kralovec
+			70 = {
+				set_building_level = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+			}
+			72 = {
+				set_building_level = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+			}
+			762 = {
+				set_building_level = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+			}
+			87 = {
+				set_building_level = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+			}
+			98 = {
+				set_building_level = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+			}
+			5 = {
+				set_building_level = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+			}
+			763 = {
+				set_building_level = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	# Hana Zagorová - Extraordinary Line Prague Warsaw Královec
+	focus = {
+		id = KRL_special_line_prague_warsaw_kralovec
+		icon = GFX_focus_POL_warsaw_main_station  # TODO: Možná custom ikona
+		prerequisite = { focus = KRL_bratislava_kralovec_corridor }
+		x = 0
+		y = 1
+		relative_position_id = KRL_bratislava_kralovec_corridor
+
+		cost = 10
+
+		completion_reward = {
+			build_railway = {
+				level = 4
+				build_only_on_allied = no
+				controller_priority = {
+					base = 1
+
+					modifier = {
+						tag = KRL
+						add = 10
+					}
+				}
+				fallback = yes
+				path = { 11542 9429 583 421 3414 3583 9567 6464 506 584 11428 9508 9400 3544 6567 9290 6375 11245 6332 }
+				#start_state = 9
+				#target_state = 763
+				start_province = 11542
+				target_province = 6332
+			}
+		}
+	}
+
+	# Unlock decisions for invite czechoslovak industries
+	focus = {
+		id = KRL_invite_czechoslovak_bussines
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+
+		prerequisite = { focus = KRL_special_line_prague_warsaw_kralovec }
+		x = 0
+		y = 1
+
+		relative_position_id = KRL_special_line_prague_warsaw_kralovec
+
+		cost = 5
+
+		completion_reward = {
+			unlock_decision_category_tooltip = krl_kralovec_invite_industries_decision_category
+		}
+	}
+
+	#################
+	##     Science
+	#################
+
+    focus = {
+		id = KRL_found_uviversity
+		icon = GFX_focus_research2
+		x = 8
+		y = 0
+
+		cost = 5
+
+		completion_reward = {
+			# 
+		}
+	}
+
+	focus = {
+		id = KRL_cooperation_program
+		icon = GFX_goal_continuous_increase_nu
+
+		x = 0
+		y = 1
+		relative_position_id = KRL_found_uviversity
+		prerequisite = {
+			focus = KRL_found_uviversity
+		}
+
+		cost = 20
+
+		completion_reward = {
+			# 
+		}
+	}
+
+	focus = {
+		id = KRL_cooperation_ku
+		icon = GFX_goal_generic_scientific_exchange
+
+		x = 0
+		y = 1
+		relative_position_id = KRL_cooperation_program
+		prerequisite = {
+			focus = KRL_cooperation_program
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = KRL_cooperation_vut
+		icon = GFX_goal_generic_scientific_exchange
+
+		x = -2
+		y = 1
+		relative_position_id = KRL_cooperation_program
+		prerequisite = {
+			focus = KRL_cooperation_program
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = KRL_cooperation_cvut
+		icon = GFX_goal_generic_scientific_exchange
+
+		x = 2
+		y = 1
+		relative_position_id = KRL_cooperation_program
+		prerequisite = {
+			focus = KRL_cooperation_program
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	#################
+	##     Army
+	#################
+
+	focus = {
+		id = KRL_army_masaryk_legacy
+		icon = GFX_KRL_focus_masaryk_legacy # GFX_KRL_focus_masaryk_legacy
+
+		x = 14
+		y = 0
+
+		cost = 5
+		
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = KRL_found_army_academy
+		icon = GFX_focus_generic_military_mission
+
+		x = 0
+		y = 1
+		relative_position_id = KRL_army_masaryk_legacy
+		prerequisite = { focus = KRL_army_masaryk_legacy }
+		prerequisite = { focus = KRL_found_uviversity }
+
+		cost = 5
+
+		completion_reward = {
+			army_experience = 50
+			# TODO: Změnit
+		}
+	}
+
+
+	# Legacy of Legions
+	focus = {
+		id = KRL_army_glory_of_legions
+		icon = GFX_focus_generic_little_entente
+
+		x = 4
+		y = 1
+		relative_position_id = KRL_army_masaryk_legacy
+
+		prerequisite = { focus = KRL_army_masaryk_legacy }
+
+		cost = 5
+
+		completion_reward = {
+			set_rule = {
+				can_send_volunteers = yes
+			}
+			add_ideas = KRL_legacy_of_legions
+		}
+	}
+
+	focus = {
+		id = KRL_legionary_bastion
+		icon = GFX_focus_generic_self_management # TODO: Změna ikony
+
+		x = 0
+		y = 1
+		relative_position_id = KRL_army_glory_of_legions
+
+		prerequisite = { focus = KRL_army_glory_of_legions }
+
+		cost = 5
+
+		completion_reward = {
+			army_experience = 50
+			# TODO: Změnit
+		}
+	}
+
+	focus = {
+		id = KRL_invite_legionars
+		icon = GFX_goal_tripartite_pact
+
+		x = 0
+		y = 1
+		relative_position_id = KRL_legionary_bastion
+
+		prerequisite = { focus = KRL_legionary_bastion }
+
+		cost = 5
+
+		completion_reward = {
+			army_experience = 50
+			# TODO: Změnit
+		}
+	}
+
+	#################
+	##     Navy
+	#################
+
+	focus = {
+		id = KRL_lessons_from_battle_of_baikal
+		icon = GFX_goal_generic_navy_battleship
+
+		x = 6
+		y = 1
+		relative_position_id = KRL_army_glory_of_legions
+
+		prerequisite = { focus = KRL_army_glory_of_legions }
+
+		cost = 5
+
+		completion_reward = {
+			navy_experience = 250
+			# TODO: Změnit
+		}
+	}
+}

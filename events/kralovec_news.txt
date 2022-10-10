@@ -1,0 +1,15 @@
+﻿add_namespace = kralovec.news
+
+news_event = {
+	id = kralovec.news.1
+	title = kralovec.news.1.t
+	desc = kralovec.news.1.d
+	picture = GFX_news_event_annex_kralovec
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = "Velvet annexation? Wierd times"
+	}
+}
