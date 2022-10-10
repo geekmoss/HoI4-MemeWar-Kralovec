@@ -30,8 +30,8 @@ krl_kralovec_invite_industries_decision_category = {
 			}
 		}
 
-		#days_remove = 30
-		#days_re_enable = 30
+		days_remove = 30
+		days_re_enable = 30
 
 		cost = 50
 
@@ -74,8 +74,8 @@ krl_kralovec_invite_industries_decision_category = {
 			}
 		}
 
-		#days_remove = 30
-		#days_re_enable = 30
+		days_remove = 30
+		days_re_enable = 30
 
 		cost = 50
 
@@ -118,8 +118,8 @@ krl_kralovec_invite_industries_decision_category = {
 			}
 		}
 
-		#days_remove = 30
-		#days_re_enable = 30
+		days_remove = 30
+		days_re_enable = 30
 
 		cost = 50
 
@@ -162,8 +162,8 @@ krl_kralovec_invite_industries_decision_category = {
 			}
 		}
 
-		#days_remove = 30
-		#days_re_enable = 30
+		days_remove = 30
+		days_re_enable = 30
 
 		cost = 50
 
@@ -206,8 +206,8 @@ krl_kralovec_invite_industries_decision_category = {
 			}
 		}
 
-		#days_remove = 30
-		#days_re_enable = 30
+		days_remove = 30
+		days_re_enable = 30
 
 		cost = 50
 
@@ -250,8 +250,8 @@ krl_kralovec_invite_industries_decision_category = {
 			}
 		}
 
-		#days_remove = 30
-		#days_re_enable = 30
+		days_remove = 30
+		days_re_enable = 30
 
 		cost = 50
 		
@@ -294,8 +294,8 @@ krl_kralovec_invite_industries_decision_category = {
 			}
 		}
 
-		#days_remove = 30
-		#days_re_enable = 30
+		days_remove = 30
+		days_re_enable = 30
 
 		cost = 50
 
@@ -338,8 +338,8 @@ krl_kralovec_invite_industries_decision_category = {
 			}
 		}
 
-		#days_remove = 30
-		#days_re_enable = 30
+		days_remove = 30
+		days_re_enable = 30
 
 		cost = 50
 

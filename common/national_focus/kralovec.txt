@@ -118,21 +118,149 @@
 		}
 	}
 
-	# Unlock decisions for invite czechoslovak industries
+	# Buildup mil
 	focus = {
-		id = KRL_invite_czechoslovak_bussines
-		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		id = KRL_build_kralovec_military_factories_1
+		icon = GFX_goal_generic_construct_mil_factory
 
 		prerequisite = { focus = KRL_special_line_prague_warsaw_kralovec }
-		x = 0
+		x = 1
 		y = 1
 
 		relative_position_id = KRL_special_line_prague_warsaw_kralovec
 
-		cost = 5
+		cost = 8
 
 		completion_reward = {
-			unlock_decision_category_tooltip = krl_kralovec_invite_industries_decision_category
+			763 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = KRL_build_kralovec_military_factories_2
+		icon = GFX_goal_generic_construct_mil_factory
+
+		prerequisite = { focus = KRL_build_kralovec_military_factories_1 }
+		x = 0
+		y = 1
+
+		relative_position_id = KRL_build_kralovec_military_factories_1
+
+		cost = 7
+
+		completion_reward = {
+			763 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = KRL_build_kralovec_military_factories_3
+		icon = GFX_goal_generic_construct_mil_factory
+
+		prerequisite = { focus = KRL_build_kralovec_military_factories_2 }
+		x = 0
+		y = 1
+
+		relative_position_id = KRL_build_kralovec_military_factories_2
+
+		cost = 7
+
+		completion_reward = {
+			763 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	# Buildup civil
+	focus = {
+		id = KRL_build_kralovec_civilian_factories_1
+		icon = GFX_goal_generic_construct_civ_factory
+
+		prerequisite = { focus = KRL_special_line_prague_warsaw_kralovec }
+		x = -1
+		y = 1
+
+		relative_position_id = KRL_special_line_prague_warsaw_kralovec
+
+		cost = 8
+
+		completion_reward = {
+			763 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = KRL_build_kralovec_civilian_factories_2
+		icon = GFX_goal_generic_construct_civ_factory
+
+		prerequisite = { focus = KRL_build_kralovec_civilian_factories_1 }
+		x = 0
+		y = 1
+
+		relative_position_id = KRL_build_kralovec_civilian_factories_1
+
+		cost = 7
+
+		completion_reward = {
+			763 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = KRL_build_kralovec_civilian_factories_3
+		icon = GFX_goal_generic_construct_civ_factory
+
+		prerequisite = { focus = KRL_build_kralovec_civilian_factories_2 }
+		x = 0
+		y = 1
+
+		relative_position_id = KRL_build_kralovec_civilian_factories_2
+
+		cost = 7
+
+		completion_reward = {
+			763 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -225,6 +353,25 @@
 		}
 	}
 
+	# Unlock decisions for invite czechoslovak industries
+	focus = {
+		id = KRL_invite_czechoslovak_bussines
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+
+		prerequisite = { focus = KRL_build_kralovec_military_factories_3 }
+		prerequisite = { focus = KRL_build_kralovec_civilian_factories_3 }
+		x = 0
+		y = 4
+
+		relative_position_id = KRL_special_line_prague_warsaw_kralovec
+
+		cost = 5
+
+		completion_reward = {
+			unlock_decision_category_tooltip = krl_kralovec_invite_industries_decision_category
+		}
+	}
+
 	#################
 	##     Army
 	#################
@@ -285,7 +432,7 @@
 
 	focus = {
 		id = KRL_legionary_bastion
-		icon = GFX_focus_generic_self_management # TODO: Změna ikony
+		icon = GFX_focus_spa_save_the_alcazar # TODO: Změna ikony
 
 		x = 0
 		y = 1
@@ -314,8 +461,8 @@
 		cost = 5
 
 		completion_reward = {
-			army_experience = 50
-			# TODO: Změnit
+			army_experience = 10
+			add_ideas = KRL_anti_soviet_sentiment_idea_1
 		}
 	}
 
@@ -338,6 +485,316 @@
 		completion_reward = {
 			navy_experience = 250
 			# TODO: Změnit
+		}
+	}
+
+	##############
+	## Diplomacy
+	##############
+
+	focus = {
+		id = KRL_our_own_way
+		icon = GFX_focus_generic_support_the_left_right
+
+		x = 12
+		y = 5
+
+		# TODO: Create some event chain for cost 30
+		#cost = 30
+		cost = 12
+
+		prerequisite = { focus = KRL_army_masaryk_legacy }
+
+		completion_reward = {
+			end_puppet = CZE
+			763 = {
+				remove_core_of = CZE
+			}
+		}
+	}
+
+	focus = {
+		id = KRL_anti_soviet_sentiment
+		icon = GFX_goal_anti_comintern_pact
+
+		x = 4
+		y = 1
+		relative_position_id = KRL_our_own_way
+
+		cost = 5
+
+		prerequisite = { focus = KRL_our_own_way }
+		prerequisite = { focus = KRL_invite_legionars }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = KRL_anti_soviet_sentiment_idea_1
+				add_idea = KRL_anti_soviet_sentiment_idea_2
+			}
+		}
+	}
+
+	focus = {
+		id = KRL_faction
+		icon = GFX_goal_anschluss
+		
+		x = 0
+		y = 1
+
+		relative_position_id = KRL_anti_soviet_sentiment
+
+		prerequisite = {
+			focus = KRL_anti_soviet_sentiment
+		}
+
+		cost = 5
+
+		completion_reward = {
+			create_faction = "Baltic Fellas Organization"
+		}
+	}
+
+	# Baltic states + finland
+
+	focus = {
+		id = KRL_faction_baltic_bois
+		icon = GFX_focus_generic_baltic_entente
+		
+		x = 2
+		y = 1
+
+		relative_position_id = KRL_faction
+
+		prerequisite = {
+			focus = KRL_faction
+		}
+
+		cost = 5
+
+		completion_reward = {
+			add_opinion_modifier = {
+				target = LIT
+				modifier = large_increase
+			}
+			add_opinion_modifier = {
+				target = LAT
+				modifier = large_increase
+			}
+			add_opinion_modifier = {
+				target = EST
+				modifier = large_increase
+			}
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = KRL_faction_invite_lit
+		icon = GFX_goal_generic_intelligence_exchange
+		
+		x = -2
+		y = 1
+
+		relative_position_id = KRL_faction_baltic_bois
+
+		prerequisite = {
+			focus = KRL_faction_baltic_bois
+		}
+
+		cost = 5
+
+		completion_reward = {
+			KRL = {
+				add_to_faction = LIT
+			}
+		}
+	}
+
+	focus = {
+		id = KRL_faction_invite_lat
+		icon = GFX_goal_generic_intelligence_exchange
+		
+		x = 0
+		y = 1
+
+		relative_position_id = KRL_faction_baltic_bois
+
+		prerequisite = {
+			focus = KRL_faction_baltic_bois
+		}
+
+		cost = 5
+
+		bypass = {
+			LAT = {
+				NOT = {
+					country_exists = LAT
+				}
+			}
+		}
+
+		completion_reward = {
+			KRL = {
+				add_to_faction = LAT
+			}
+		}
+	}
+
+	focus = {
+		id = KRL_faction_invite_est
+		icon = GFX_goal_generic_intelligence_exchange
+		
+		x = 2
+		y = 1
+
+		relative_position_id = KRL_faction_baltic_bois
+
+		prerequisite = {
+			focus = KRL_faction_baltic_bois
+		}
+
+		cost = 5
+
+		bypass = {
+			EST = {
+				NOT = {
+					country_exists = EST
+				}
+			}
+		}
+
+		completion_reward = {
+			KRL = {
+				add_to_faction = EST
+			}
+		}
+	}
+
+	focus = {
+		id = KRL_faction_invite_fin
+		icon = GFX_focus_invite_finland
+		
+		x = 0
+		y = 1
+
+		relative_position_id = KRL_faction_invite_est
+
+		prerequisite = {
+			focus = KRL_faction_invite_est
+		}
+
+		cost = 5
+
+		bypass = {
+			FIN = {
+				NOT = {
+					country_exists = FIN
+				}
+			}
+		}
+
+		completion_reward = {
+			KRL = {
+				add_to_faction = FIN
+			}
+		}
+	}
+
+	# New & Old friends
+
+	focus = {
+		id = KRL_faction_invite_brothers
+		icon = GFX_goal_tripartite_pact
+
+		x = 0
+		y = 1
+		
+		relative_position_id = KRL_faction
+
+		prerequisite = {
+			focus = KRL_faction
+		}
+
+		cost = 5
+
+		bypass = {
+			CZE = {
+				NOT = {
+					country_exists = CZE
+				}
+			}
+		}
+
+		completion_reward = {
+			KRL = {
+				add_to_faction = CZE
+			}
+		}
+	}
+
+	focus = {
+		id = KRL_faction_befriend_poles
+		icon = GFX_focus_POL_expand_polish_intelligence
+
+		x = -2
+		y = 1
+		
+		relative_position_id = KRL_faction
+
+		prerequisite = {
+			focus = KRL_faction
+		}
+
+		cost = 5
+
+		bypass = {
+			POL = {
+				NOT = {
+					country_exists = POL
+				}
+			}
+		}
+
+		completion_reward = {
+			add_opinion_modifier = {
+				target = POL
+				modifier = huge_increase
+			}
+			reverse_add_opinion_modifier = {
+				target = POL
+				modifier = huge_increase
+			}
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = KRL_faction_invite_poles
+		icon = GFX_focus_generic_polish_deal
+
+		x = 0
+		y = 1
+		
+		relative_position_id = KRL_faction_befriend_poles
+
+		prerequisite = {
+			focus = KRL_faction_befriend_poles
+		}
+
+		cost = 5
+
+		bypass = {
+			POL = {
+				NOT = {
+					country_exists = POL
+				}
+			}
+		}
+
+		completion_reward = {
+			KRL = {
+				add_to_faction = POL
+			}
 		}
 	}
 }

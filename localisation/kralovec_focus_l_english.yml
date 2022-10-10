@@ -3,6 +3,12 @@
   KRL_bratislava_kralovec_corridor:0 "Bratislava-Královec Corridor"
   KRL_special_line_prague_warsaw_kralovec:0 "Extraordinary line Prague Warsaw Královec"
   KRL_invite_czechoslovak_bussines:0 "Invite Czechoslovak Bussines"
+  KRL_build_kralovec_civilian_factories_1:0 "Investment in civilian sector"
+  KRL_build_kralovec_civilian_factories_2:0 "Investment in civilian sector"  
+  KRL_build_kralovec_civilian_factories_3:0 "Investment in civilian sector"
+  KRL_build_kralovec_military_factories_1:0 "Investment in military sector"
+  KRL_build_kralovec_military_factories_2:0 "Investment in military sector"  
+  KRL_build_kralovec_military_factories_3:0 "Investment in military sector"
   # Science
   KRL_found_uviversity:0 "Found university of Přemysl Otakar II."
   KRL_cooperation_program:0 "Cooperation program"
@@ -18,3 +24,15 @@
   KRL_invite_legionars:0 "Invite legionars"
   # Navy  
   KRL_lessons_from_battle_of_baikal:0 "Lesson from battle of Baikal"
+  # Diplomacy
+  KRL_our_own_way:0 "Our own way..."
+  KRL_anti_soviet_sentiment:0 "Anti-Soviet Sentiment"
+  KRL_faction:0 "Baltic Fellas Organization"
+  KRL_faction_befriend_poles:0 "Befriend Poles"
+  KRL_faction_invite_poles:0 "Invite Poles"
+  KRL_faction_invite_brothers:0 "Invite brothers"
+  KRL_faction_baltic_bois:0 "Befriend Baltic Bois"
+  KRL_faction_invite_lit:0 "Invite Lithuania"
+  KRL_faction_invite_lat:0 "Invite Latvia"
+  KRL_faction_invite_est:0 "Invite Estonia"
+  KRL_faction_invite_fin:0 "Invite Finland"

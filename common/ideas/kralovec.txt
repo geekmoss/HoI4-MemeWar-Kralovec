@@ -54,7 +54,11 @@ ideas = {
 
 			removal_cost = -1
 
-			# TODO: Pridat efekty
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
 		}
 
 		KRL_tatra = {
@@ -70,7 +74,18 @@ ideas = {
 
 			removal_cost = -1
 
-			# TODO: Pridat efekty
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				mechanized_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+
+			research_bonus = {
+				motorized_equipment = 0.05
+			}
 		}
 
 		KRL_aero = {
@@ -86,7 +101,15 @@ ideas = {
 
 			removal_cost = -1
 
-			# TODO: Pridat efekty
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.15 instant = yes
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.10
+			}
 		}
 
 		KRL_zbrojovka = {
@@ -102,7 +125,11 @@ ideas = {
 
 			removal_cost = -1
 
-			# TODO: Pridat efekty
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.25 instant = yes
+				}
+			}
 		}
 
 		KRL_jawa = {
@@ -118,7 +145,11 @@ ideas = {
 
 			removal_cost = -1
 
-			# TODO: Pridat efekty
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
 		}
 
 		KRL_ckd = {
@@ -134,7 +165,87 @@ ideas = {
 
 			removal_cost = -1
 
-			# TODO: Pridat efekty
+			equipment_bonus = {
+				artillery_equipment = {
+					build_cost_ic = -0.10 instant = yes
+				}
+			}
+		}
+
+		KRL_anti_soviet_sentiment_idea_1 = {
+			allowed = {
+				always = no
+			}
+
+			picture = anti_soviet_pact
+
+			removal_cost = -1
+		}
+
+		KRL_anti_soviet_sentiment_idea_2 = {
+			allowed = {
+				always = no
+			}
+
+			picture = anti_soviet_pact
+
+			removal_cost = -1
+
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+		}
+
+		KRL_anti_soviet_sentiment_idea_3 = {
+			allowed = {
+				always = no
+			}
+
+			picture = anti_soviet_pact
+
+			removal_cost = -1
+
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.10
+				defense_bonus_against = 0.10
+			}
+		}
+
+		KRL_anti_soviet_sentiment_idea_4 = {
+			allowed = {
+				always = no
+			}
+
+			picture = anti_soviet_pact
+
+			removal_cost = -1
+
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.10
+				defense_bonus_against = 0.10
+				breakthrough_bonus_against = 0.05
+			}
+		}
+
+		KRL_anti_soviet_sentiment_idea_4 = {
+			allowed = {
+				always = no
+			}
+
+			picture = anti_soviet_pact
+
+			removal_cost = -1
+
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.10
+				defense_bonus_against = 0.10
+				breakthrough_bonus_against = 0.10
+			}
 		}
 	}
 }
