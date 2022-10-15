@@ -11,4 +11,17 @@ characters={
 			id=-1
 		}
 	}
+
+	KRL_radola_gajda= {
+		name="Radola Gajda"
+		portraits = {
+			civilian = {
+				large="GFX_portrait_KRL_Radola_Gajda"
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			id=1
+		}
+	}
 }

@@ -274,10 +274,10 @@
 		x = 8
 		y = 0
 
-		cost = 5
+		cost = 7
 
 		completion_reward = {
-			# 
+			inherit_technology = CZE
 		}
 	}
 
@@ -292,10 +292,27 @@
 			focus = KRL_found_uviversity
 		}
 
+		cancelable = no
+		select_effect = {
+			add_ideas = KRL_cooperation_program_idea_active
+			CZE = {
+				add_ideas = KRL_cooperation_program_idea_active
+			}
+		}
 		cost = 20
 
 		completion_reward = {
-			# 
+			hidden_effect = {
+				remove_ideas = KRL_cooperation_program_idea_active
+			}
+
+			add_ideas = KRL_cooperation_program_idea_passive
+			CZE = {
+				hidden_effect = {
+					remove_ideas = KRL_cooperation_program_idea_active
+				}
+				add_ideas = KRL_cooperation_program_idea_passive
+			}
 		}
 	}
 
@@ -440,11 +457,36 @@
 
 		prerequisite = { focus = KRL_army_glory_of_legions }
 
-		cost = 5
+		cost = 7
 
 		completion_reward = {
-			army_experience = 50
-			# TODO: Změnit
+			set_popularities = {
+				democratic = 60
+				neutrality = 30
+				fascism = 10
+				communism = 0
+			}
+			set_party_name = {
+				ideology = neutrality
+				long_name = "Obec Legionářská"
+				name = "OL"
+			}
+			set_party_name = {
+				ideology = fascism
+				long_name = "Národní obec fašistická"
+				name = "NOF"
+			}
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed  = no
+			}
+
+			create_country_leader = {
+				name = "Obec Legionářská"
+				picture = GFX_portrait_KRL_MemeWarJunta
+				expire = "1990.1.1"
+				ideology = moderatism
+			}
 		}
 	}
 
@@ -458,11 +500,24 @@
 
 		prerequisite = { focus = KRL_legionary_bastion }
 
-		cost = 5
+		cost = 2
 
 		completion_reward = {
 			army_experience = 10
 			add_ideas = KRL_anti_soviet_sentiment_idea_1
+			hidden_effect = {
+				country_event = {
+					id = kralovec.17
+					days = 5
+					random_days = 10
+				}
+
+				country_event = {
+					id = kralovec.18
+					days = 10
+					random_days = 20
+				}
+			}
 		}
 	}
 

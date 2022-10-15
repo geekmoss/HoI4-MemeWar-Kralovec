@@ -211,3 +211,47 @@ country_event = {
 		name = kralovec.decision.invitations.accept_btn
 	}
 }
+
+# Legionars recruiment
+
+country_event = {
+	id = kralovec.17
+	title = kralovec.17.t
+	desc = kralovec.17.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = kralovec.17.o1
+
+		CZE = {
+			every_army_leader = {
+				limit = {
+					is_character = CZE_josef_shnejdarek
+				}
+				set_nationality = KRL
+			}
+		}
+	}
+}
+
+country_event = {
+	id = kralovec.18
+	title = kralovec.18.t
+	desc = kralovec.18.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = kralovec.18.o1
+		
+		CZE = {
+			every_army_leader = {
+				limit = {
+					is_character = CZE_sergej_vojcechovsky
+				}
+				set_nationality = KRL
+			}
+		}
+	}
+}

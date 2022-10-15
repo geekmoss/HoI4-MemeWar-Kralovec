@@ -231,7 +231,7 @@ ideas = {
 			}
 		}
 
-		KRL_anti_soviet_sentiment_idea_4 = {
+		KRL_anti_soviet_sentiment_idea_5 = {
 			allowed = {
 				always = no
 			}
@@ -245,6 +245,33 @@ ideas = {
 				attack_bonus_against = 0.10
 				defense_bonus_against = 0.10
 				breakthrough_bonus_against = 0.10
+			}
+		}
+
+		KRL_cooperation_program_idea_active = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_flexible_foreign_policy2
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.33
+			}
+		}
+		KRL_cooperation_program_idea_passive = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_flexible_foreign_policy2
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.05
 			}
 		}
 	}

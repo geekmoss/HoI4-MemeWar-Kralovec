@@ -1,6 +1,0 @@
-spriteTypes = {
-	spriteType = {
-		name = "GFX_portrait_KRL_MemeWarJunta"
-		texturefile = "gfx/leaders/KRL/Portrait_Kralovec_MemeWarJunta.dds"
-	}
-}

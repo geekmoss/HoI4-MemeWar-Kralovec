@@ -11,7 +11,8 @@
   KRL_build_kralovec_military_factories_3:0 "Investment in military sector"
   # Science
   KRL_found_uviversity:0 "Found university of Přemysl Otakar II."
-  KRL_cooperation_program:0 "Cooperation program"
+  KRL_cooperation_program:0 "Cooperation programme"
+  KRL_cooperation_program_desc:0 "We will get a short-term boost in research during the launch of the Cooperative programme. After 140 days we will have a long term permanent research speed bonus."
   KRL_cooperation_vut:0 "Cooperation with VUT"
   KRL_cooperation_ku:0 "Cooperation with Charles Univesity"
   KRL_cooperation_cvut:0 "Cooperation with ČVUT"
