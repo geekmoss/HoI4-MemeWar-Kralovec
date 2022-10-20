@@ -615,7 +615,7 @@
 		id = KRL_faction_baltic_bois
 		icon = GFX_focus_generic_baltic_entente
 		
-		x = 2
+		x = 3
 		y = 1
 
 		relative_position_id = KRL_faction
@@ -659,9 +659,8 @@
 		cost = 5
 
 		completion_reward = {
-			KRL = {
-				add_to_faction = LIT
-			}
+			# KRL = { add_to_faction = LIT }
+			LIT = { country_event = kralovecfaction.2 }
 		}
 	}
 
@@ -689,9 +688,8 @@
 		}
 
 		completion_reward = {
-			KRL = {
-				add_to_faction = LAT
-			}
+			# KRL = { add_to_faction = LAT }
+			LAT = { country_event = kralovecfaction.3 }
 		}
 	}
 
@@ -719,9 +717,8 @@
 		}
 
 		completion_reward = {
-			KRL = {
-				add_to_faction = EST
-			}
+			# KRL = { add_to_faction = EST }
+			EST = { country_event = kralovecfaction.4 }
 		}
 	}
 
@@ -749,9 +746,8 @@
 		}
 
 		completion_reward = {
-			KRL = {
-				add_to_faction = FIN
-			}
+			# KRL = { add_to_faction = FIN }
+			FIN = { country_event = kralovecfaction.5 }
 		}
 	}
 
@@ -761,7 +757,7 @@
 		id = KRL_faction_invite_brothers
 		icon = GFX_goal_tripartite_pact
 
-		x = 0
+		x = -1
 		y = 1
 		
 		relative_position_id = KRL_faction
@@ -781,8 +777,9 @@
 		}
 
 		completion_reward = {
-			KRL = {
-				add_to_faction = CZE
+			# KRL = { add_to_faction = CZE }
+			CZE = {
+				country_event = kralovecfaction.6
 			}
 		}
 	}
@@ -791,7 +788,7 @@
 		id = KRL_faction_befriend_poles
 		icon = GFX_focus_POL_expand_polish_intelligence
 
-		x = -2
+		x = -3
 		y = 1
 		
 		relative_position_id = KRL_faction
@@ -847,8 +844,261 @@
 		}
 
 		completion_reward = {
+			# KRL = {	add_to_faction = POL }
+			POL = { country_event = kralovecfaction.1 }
+		}
+	}
+
+	focus = {
+		id = KRL_poland_boost_anti_soviet_sentiment
+		icon = GFX_KRL_focus_poland_anti_soviet_sentiment
+
+		x = 0
+		y = 2
+		
+		relative_position_id = KRL_faction_invite_poles
+
+		prerequisite = {
+			focus = KRL_faction_invite_poles
+		}
+
+		available = {
+			is_in_faction_with = POL
+		}
+
+		cost = 5
+
+		bypass = {
+			has_idea = KRL_anti_soviet_sentiment_idea_5
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = KRL_anti_soviet_sentiment_idea_2
+				}
+				swap_ideas = {
+					remove_idea = KRL_anti_soviet_sentiment_idea_2
+					add_idea = KRL_anti_soviet_sentiment_idea_3
+				}
+			}
+
+			else_if = {
+				limit = {
+					has_idea = KRL_anti_soviet_sentiment_idea_3
+				}
+				swap_ideas = {
+					remove_idea = KRL_anti_soviet_sentiment_idea_3
+					add_idea = KRL_anti_soviet_sentiment_idea_4
+				}
+			}
+
+			else_if = {
+				limit = {
+					has_idea = KRL_anti_soviet_sentiment_idea_4
+				}
+				swap_ideas = {
+					remove_idea = KRL_anti_soviet_sentiment_idea_4
+					add_idea = KRL_anti_soviet_sentiment_idea_5
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = KRL_baltic_boost_anti_soviet_sentiment
+		icon = GFX_KRL_focus_est_anti_soviet_sentiment
+
+		x = 0
+		y = 3
+		
+		relative_position_id = KRL_faction_baltic_bois
+
+		prerequisite = { focus = KRL_faction_invite_lit }
+		prerequisite = { focus = KRL_faction_invite_est }
+		prerequisite = { focus = KRL_faction_invite_lat }
+
+		available = {
+			is_in_faction_with = EST
+			is_in_faction_with = LAT
+			is_in_faction_with = LIT
+		}
+
+		cost = 5
+
+		bypass = {
+			has_idea = KRL_anti_soviet_sentiment_idea_5
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = KRL_anti_soviet_sentiment_idea_2
+				}
+				swap_ideas = {
+					remove_idea = KRL_anti_soviet_sentiment_idea_2
+					add_idea = KRL_anti_soviet_sentiment_idea_3
+				}
+			}
+
+			else_if = {
+				limit = {
+					has_idea = KRL_anti_soviet_sentiment_idea_3
+				}
+				swap_ideas = {
+					remove_idea = KRL_anti_soviet_sentiment_idea_3
+					add_idea = KRL_anti_soviet_sentiment_idea_4
+				}
+			}
+
+			else_if = {
+				limit = {
+					has_idea = KRL_anti_soviet_sentiment_idea_4
+				}
+				swap_ideas = {
+					remove_idea = KRL_anti_soviet_sentiment_idea_4
+					add_idea = KRL_anti_soviet_sentiment_idea_5
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = KRL_cze_boost_anti_soviet_sentiment
+		icon = GFX_KRL_focus_cze_anti_soviet_sentiment
+
+		x = 0
+		y = 3
+		
+		relative_position_id = KRL_faction_invite_brothers
+
+		prerequisite = { focus = KRL_faction_invite_brothers }
+
+		available = {
+			is_in_faction_with = CZE
+		}
+
+		cost = 5
+
+		bypass = {
+			has_idea = KRL_anti_soviet_sentiment_idea_5
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = KRL_anti_soviet_sentiment_idea_2
+				}
+				swap_ideas = {
+					remove_idea = KRL_anti_soviet_sentiment_idea_2
+					add_idea = KRL_anti_soviet_sentiment_idea_3
+				}
+			}
+
+			else_if = {
+				limit = {
+					has_idea = KRL_anti_soviet_sentiment_idea_3
+				}
+				swap_ideas = {
+					remove_idea = KRL_anti_soviet_sentiment_idea_3
+					add_idea = KRL_anti_soviet_sentiment_idea_4
+				}
+			}
+
+			else_if = {
+				limit = {
+					has_idea = KRL_anti_soviet_sentiment_idea_4
+				}
+				swap_ideas = {
+					remove_idea = KRL_anti_soviet_sentiment_idea_4
+					add_idea = KRL_anti_soviet_sentiment_idea_5
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = KRL_fin_boost_anti_soviet_sentiment
+		icon = GFX_KRL_focus_fin_anti_soviet_sentiment
+
+		x = 0
+		y = 1
+		
+		relative_position_id = KRL_faction_invite_fin
+
+		prerequisite = { focus = KRL_faction_invite_fin }
+
+		available = {
+			is_in_faction_with = FIN
+		}
+
+		cost = 5
+
+		bypass = {
+			has_idea = KRL_anti_soviet_sentiment_idea_5
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = KRL_anti_soviet_sentiment_idea_2
+				}
+				swap_ideas = {
+					remove_idea = KRL_anti_soviet_sentiment_idea_2
+					add_idea = KRL_anti_soviet_sentiment_idea_3
+				}
+			}
+
+			else_if = {
+				limit = {
+					has_idea = KRL_anti_soviet_sentiment_idea_3
+				}
+				swap_ideas = {
+					remove_idea = KRL_anti_soviet_sentiment_idea_3
+					add_idea = KRL_anti_soviet_sentiment_idea_4
+				}
+			}
+
+			else_if = {
+				limit = {
+					has_idea = KRL_anti_soviet_sentiment_idea_4
+				}
+				swap_ideas = {
+					remove_idea = KRL_anti_soviet_sentiment_idea_4
+					add_idea = KRL_anti_soviet_sentiment_idea_5
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = KRL_better_dead_than_red
+		icon = GFX_KRL_focus_better_dead_than_red
+
+		x = 1
+		y = 5
+		
+		relative_position_id = KRL_faction
+
+		prerequisite = { focus = KRL_cze_boost_anti_soviet_sentiment }
+		prerequisite = { focus = KRL_fin_boost_anti_soviet_sentiment }
+		prerequisite = { focus = KRL_baltic_boost_anti_soviet_sentiment }
+		prerequisite = { focus = KRL_poland_boost_anti_soviet_sentiment }
+
+		cost = 5
+
+		completion_reward = {
+			# KRL_better_dead_than_red
+			every_country = {
+				limit = {
+					is_in_faction_with = KRL
+				}
+
+				add_ideas = KRL_better_dead_than_red
+			}
+
 			KRL = {
-				add_to_faction = POL
+				remove_ideas = KRL_anti_soviet_sentiment_idea_5
 			}
 		}
 	}

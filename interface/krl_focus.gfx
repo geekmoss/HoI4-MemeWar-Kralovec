@@ -5,7 +5,27 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_KRL_focus_masaryk_legacy_test"
-		texturefile = "gfx/interface/goals/test.dds"
+		name = "GFX_KRL_focus_poland_anti_soviet_sentiment"
+		texturefile = "gfx/interface/goals/focus_KRL_BijBolsevika.dds"
+	}
+
+	spriteType = {
+		name = "GFX_KRL_focus_est_anti_soviet_sentiment"
+		texturefile = "gfx/interface/goals/EstAntiSovietPoster.dds"
+	}
+
+	spriteType = {
+		name = "GFX_KRL_focus_fin_anti_soviet_sentiment"
+		texturefile = "gfx/interface/goals/FinAntiSovietPoster.dds"
+	}
+
+	spriteType = {
+		name = "GFX_KRL_focus_cze_anti_soviet_sentiment"
+		texturefile = "gfx/interface/goals/CzeAntiSovietPoster.dds"
+	}
+
+	spriteType = {
+		name = "GFX_KRL_focus_better_dead_than_red"
+		texturefile = "gfx/interface/goals/BetterDeadThanRed.dds"
 	}
 }

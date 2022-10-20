@@ -1,0 +1,148 @@
+add_namespace = kralovecfaction
+
+# Join faction
+
+# POL
+country_event = {
+	id = kralovecfaction.1
+	title = kralovecfaction.1.t
+	desc = kralovecfaction.1.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = kralovecfaction.accept
+		ai_chance = {
+			base = 10
+		}
+
+		KRL = {
+			add_to_faction = POL
+		}
+	}
+
+	option = {
+		name = kralovecfaction.refuse
+	}
+}
+
+# LIT
+country_event = {
+	id = kralovecfaction.2
+	title = kralovecfaction.2.t
+	desc = kralovecfaction.2.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = kralovecfaction.accept
+		ai_chance = {
+			base = 10
+		}
+
+		KRL = {
+			add_to_faction = LIT
+		}
+	}
+
+	option = {
+		name = kralovecfaction.refuse
+	}
+}
+
+# LAT
+country_event = {
+	id = kralovecfaction.3
+	title = kralovecfaction.3.t
+	desc = kralovecfaction.3.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = kralovecfaction.accept
+		ai_chance = {
+			base = 10
+		}
+
+		KRL = {
+			add_to_faction = LAT
+		}
+	}
+
+	option = {
+		name = kralovecfaction.refuse
+	}
+}
+
+# EST
+country_event = {
+	id = kralovecfaction.4
+	title = kralovecfaction.4.t
+	desc = kralovec.4.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = kralovecfaction.accept
+		ai_chance = {
+			base = 10
+		}
+
+		KRL = {
+			add_to_faction = EST
+		}
+	}
+
+	option = {
+		name = kralovecfaction.refuse
+	}
+}
+
+# FIN
+country_event = {
+	id = kralovecfaction.5
+	title = kralovecfaction.5.t
+	desc = kralovecfaction.5.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = kralovecfaction.accept
+		ai_chance = {
+			base = 10
+		}
+
+		KRL = {
+			add_to_faction = FIN
+		}
+	}
+
+	option = {
+		name = kralovecfaction.refuse
+	}
+}
+
+# CZE
+country_event = {
+	id = kralovecfaction.6
+	title = kralovecfaction.6.t
+	desc = kralovecfaction.6.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = kralovecfaction.accept
+		ai_chance = {
+			base = 10
+			factor = 2
+		}
+
+		KRL = {
+			add_to_faction = CZE
+		}
+	}
+
+	option = {
+		name = kralovecfaction.refuse
+	}
+}
