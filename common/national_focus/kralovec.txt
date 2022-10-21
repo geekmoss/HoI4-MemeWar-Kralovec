@@ -483,7 +483,7 @@
 
 			create_country_leader = {
 				name = "Obec Legionářská"
-				picture = GFX_portrait_KRL_MemeWarJunta
+				picture = GFX_portrait_KRL_KralovecLeader
 				expire = "1990.1.1"
 				ideology = moderatism
 			}
@@ -516,6 +516,12 @@
 					id = kralovec.18
 					days = 10
 					random_days = 20
+				}
+
+				country_event = {
+					id = kralovec.19
+					days = 180
+					random_days = 60
 				}
 			}
 		}

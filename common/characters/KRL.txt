@@ -1,9 +1,9 @@
 characters={
-	KRL_meme_war_junta= {
-		name="Council of MemeWar"
+	KRL_peoples_assembly= {
+		name="People's Assembly"
 		portraits = {
 			civilian = {
-				large="GFX_portrait_KRL_MemeWarJunta"
+				large="GFX_portrait_KRL_KralovecLeader"
 			}
 		}
 		country_leader={

@@ -255,3 +255,43 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = kralovec.19
+	title = kralovec.19.t
+	desc = kralovec.19.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = kralovec.19.o1
+		
+		create_country_leader = {
+			name = "Jan Syrový"
+			picture = GFX_portrait_KRL_Jan_Syrovy
+			expire = "1990.1.1"
+			ideology = moderatism
+			traits = { legionary }
+		}
+	}
+}
+
+country_event = {
+	id = kralovec.20
+	title = kralovec.20.t
+	desc = kralovec.20.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = kralovec.20.o1
+		
+		create_country_leader = {
+			name = "Alios Eliáš"
+			picture = GFX_portrait_KRL_Alois_Elias
+			expire = "1990.1.1"
+			ideology = moderatism
+			traits = { legionary }
+		}
+	}
+}

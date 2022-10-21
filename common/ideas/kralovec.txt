@@ -290,6 +290,7 @@ ideas = {
 				defense_bonus_against = 0.15
 				breakthrough_bonus_against = 0.15
 				generate_wargoal_tension_against = -0.20
+				
 			}
 		}
 	}
