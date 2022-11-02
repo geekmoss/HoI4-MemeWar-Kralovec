@@ -22,7 +22,7 @@
 	focus = {
 		id = KRL_bratislava_kralovec_corridor
 		icon = GFX_focus_SOV_the_road_of_life
-		x = 2
+		x = 6
 		y = 0
 
 		cost = 5
@@ -263,6 +263,33 @@
 			}
 		}
 	}
+	
+	# Others
+	focus = {
+		id = KRL_invite_people
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+
+		prerequisite = { focus = KRL_special_line_prague_warsaw_kralovec }
+		
+		x = -3
+		y = 1
+		relative_position_id = KRL_special_line_prague_warsaw_kralovec
+
+		cost = 5
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = KRL_incoming_people_mil }
+				swap_ideas = {
+					remove_idea = KRL_incoming_people_mil
+					add_idea = KRL_incoming_people_combined
+				}
+			}
+			else = {
+				add_ideas = { KRL_incoming_people_civil }
+			}
+		}
+	}
 
 	#################
 	##     Science
@@ -271,7 +298,9 @@
     focus = {
 		id = KRL_found_uviversity
 		icon = GFX_focus_research2
-		x = 8
+
+		relative_position_id = KRL_bratislava_kralovec_corridor
+		x = 6
 		y = 0
 
 		cost = 7
@@ -397,8 +426,9 @@
 		id = KRL_army_masaryk_legacy
 		icon = GFX_KRL_focus_masaryk_legacy # GFX_KRL_focus_masaryk_legacy
 
-		x = 14
+		x = 16
 		y = 0
+		relative_position_id = KRL_found_uviversity
 
 		cost = 5
 		
@@ -411,7 +441,7 @@
 		id = KRL_found_army_academy
 		icon = GFX_focus_generic_military_mission
 
-		x = 0
+		x = -8
 		y = 1
 		relative_position_id = KRL_army_masaryk_legacy
 		prerequisite = { focus = KRL_army_masaryk_legacy }
@@ -419,53 +449,93 @@
 
 		cost = 5
 
+		available = {
+			OR = {
+				has_character = CZE_josef_shnejdarek
+				has_character = CZE_sergej_vojcechovsky
+			}
+		}
+
 		completion_reward = {
-			army_experience = 50
-			# TODO: Změnit
+			army_experience = 25
+			add_ideas = { KRL_mil_academy }
 		}
 	}
 
 
 	# Legacy of Legions
-	focus = {
-		id = KRL_army_glory_of_legions
-		icon = GFX_focus_generic_little_entente
 
-		x = 4
+	focus = {
+		id = KRL_invite_legionars
+		icon = GFX_goal_tripartite_pact
+
+		x = 0
 		y = 1
 		relative_position_id = KRL_army_masaryk_legacy
 
 		prerequisite = { focus = KRL_army_masaryk_legacy }
 
-		cost = 5
+		cost = 2
 
 		completion_reward = {
-			set_rule = {
-				can_send_volunteers = yes
+			army_experience = 5
+			hidden_effect = {
+				country_event = {
+					id = kralovec.17
+					days = 10
+					random_days = 90
+				}
+
+				country_event = {
+					id = kralovec.18
+					days = 60
+					random_days = 180
+				}
+
+				country_event = {
+					id = kralovec.19
+					days = 180
+					random_days = 180
+				}
 			}
-			add_ideas = KRL_legacy_of_legions
+
+			if = {
+				limit = { has_idea = KRL_incoming_people_civil }
+				swap_ideas = {
+					remove_idea = KRL_incoming_people_civil
+					add_idea = KRL_incoming_people_combined
+				}
+			}
+			else = {
+				add_ideas = { KRL_incoming_people_mil }
+			}
 		}
 	}
-
+	
 	focus = {
 		id = KRL_legionary_bastion
 		icon = GFX_focus_spa_save_the_alcazar # TODO: Změna ikony
 
 		x = 0
 		y = 1
-		relative_position_id = KRL_army_glory_of_legions
+		relative_position_id = KRL_invite_legionars
 
-		prerequisite = { focus = KRL_army_glory_of_legions }
+		prerequisite = { focus = KRL_invite_legionars }
 
 		cost = 7
 
 		completion_reward = {
-			set_popularities = {
-				democratic = 60
-				neutrality = 30
-				fascism = 10
-				communism = 0
+			add_ideas = KRL_anti_soviet_sentiment_idea_1
+
+			hidden_effect = {
+				set_popularities = {
+					democratic = 60
+					neutrality = 30
+					fascism = 10
+					communism = 0
+				}
 			}
+			
 			set_party_name = {
 				ideology = neutrality
 				long_name = "Obec Legionářská"
@@ -480,50 +550,27 @@
 				ruling_party = neutrality
 				elections_allowed  = no
 			}
-
-			create_country_leader = {
-				name = "Obec Legionářská"
-				picture = GFX_portrait_KRL_KralovecLeader
-				expire = "1990.1.1"
-				ideology = moderatism
-			}
 		}
 	}
 
 	focus = {
-		id = KRL_invite_legionars
-		icon = GFX_goal_tripartite_pact
+		id = KRL_army_glory_of_legions
+		icon = GFX_focus_generic_little_entente
 
 		x = 0
 		y = 1
 		relative_position_id = KRL_legionary_bastion
 
-		prerequisite = { focus = KRL_legionary_bastion }
+		prerequisite = { focus = KRL_legionary_bastion	}
 
-		cost = 2
+		cost = 5
 
 		completion_reward = {
-			army_experience = 10
-			add_ideas = KRL_anti_soviet_sentiment_idea_1
-			hidden_effect = {
-				country_event = {
-					id = kralovec.17
-					days = 5
-					random_days = 10
-				}
-
-				country_event = {
-					id = kralovec.18
-					days = 10
-					random_days = 20
-				}
-
-				country_event = {
-					id = kralovec.19
-					days = 180
-					random_days = 60
-				}
+			set_rule = {
+				can_send_volunteers = yes
 			}
+			add_ideas = KRL_legacy_of_legions_1
+			army_experience = 25
 		}
 	}
 
@@ -535,17 +582,163 @@
 		id = KRL_lessons_from_battle_of_baikal
 		icon = GFX_goal_generic_navy_battleship
 
-		x = 6
+		x = -6
 		y = 1
 		relative_position_id = KRL_army_glory_of_legions
 
 		prerequisite = { focus = KRL_army_glory_of_legions }
+		prerequisite = { focus = KRL_found_army_academy }
 
 		cost = 5
 
 		completion_reward = {
-			navy_experience = 250
-			# TODO: Změnit
+			navy_experience = 100
+		}
+	}
+
+	focus = {
+		id = KRL_build_up_docks
+		icon = GFX_goal_generic_construct_naval_dockyard
+
+		x = 0
+		y = 1
+		relative_position_id = KRL_lessons_from_battle_of_baikal
+
+		prerequisite = { focus = KRL_lessons_from_battle_of_baikal }
+
+		cost = 7
+
+		completion_reward = {
+			763 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = KRL_battleship_catchup_1
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = KRL_build_up_docks }
+		x = 2
+		y = 1
+		relative_position_id = KRL_build_up_docks
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 4
+				category = bb_tech
+			}
+		}
+	}
+
+	focus = {
+		id = KRL_destroyer_catchup_1
+		icon = GFX_goal_generic_navy_anti_submarine
+		prerequisite = { focus = KRL_build_up_docks }
+		x = -2
+		y = 1
+		relative_position_id = KRL_build_up_docks
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 4
+				category = dd_tech
+			}
+		}
+	}
+
+	focus = {
+		id = KRL_cruiser__catchup_1
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = KRL_build_up_docks }
+		x = 0
+		y = 1
+		relative_position_id = KRL_build_up_docks
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 4
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+	}
+
+	focus = {
+		id = KRL_raiding_focus
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = KRL_destroyer_catchup_1 }
+		prerequisite = { focus = KRL_cruiser__catchup_1 }
+		mutually_exclusive = { focus = KRL_capital_focus }
+		x = -1
+		y = 2
+		relative_position_id = KRL_build_up_docks
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = naval_doc_bonus
+				cost_reduction = 0.50
+				uses = 2
+				category = cat_trade_interdiction
+			}
+		}
+	}
+
+	focus = {
+		id = KRL_capital_focus
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = KRL_cruiser__catchup_1 }
+		prerequisite = { focus = KRL_battleship_catchup_1 }
+		mutually_exclusive = { focus = KRL_raiding_focus }
+		x = 1
+		y = 2
+		relative_position_id = KRL_build_up_docks
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = naval_doc_bonus
+				cost_reduction = 0.50
+				uses = 2
+				category = cat_fleet_in_being
+			}
 		}
 	}
 
@@ -557,8 +750,10 @@
 		id = KRL_our_own_way
 		icon = GFX_focus_generic_support_the_left_right
 
-		x = 12
-		y = 5
+		relative_position_id = KRL_army_masaryk_legacy
+
+		x = 2
+		y = 3
 
 		# TODO: Create some event chain for cost 30
 		#cost = 30
@@ -578,14 +773,14 @@
 		id = KRL_anti_soviet_sentiment
 		icon = GFX_goal_anti_comintern_pact
 
-		x = 4
-		y = 1
+		x = -1
+		y = 2
 		relative_position_id = KRL_our_own_way
 
 		cost = 5
 
 		prerequisite = { focus = KRL_our_own_way }
-		prerequisite = { focus = KRL_invite_legionars }
+		prerequisite = { focus = KRL_army_glory_of_legions }
 
 		completion_reward = {
 			swap_ideas = {

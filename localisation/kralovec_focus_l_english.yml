@@ -9,6 +9,7 @@
   KRL_build_kralovec_military_factories_1:0 "Investment in military sector"
   KRL_build_kralovec_military_factories_2:0 "Investment in military sector"  
   KRL_build_kralovec_military_factories_3:0 "Investment in military sector"
+  KRL_invite_people:0 "Invite people from homeland"
   # Science
   KRL_found_uviversity:0 "Found university of Přemysl Otakar II."
   KRL_cooperation_program:0 "Cooperation programme"
@@ -25,6 +26,12 @@
   KRL_invite_legionars:0 "Invite legionars"
   # Navy  
   KRL_lessons_from_battle_of_baikal:0 "Lesson from battle of Baikal"
+  KRL_build_up_docks:0 "Buildup Dockyards"
+  KRL_destroyer_catchup_1:0 "Some destroyers..."
+  KRL_cruiser__catchup_1:0 "Some cruisers..."
+  KRL_battleship_catchup_1:0 "Some battleships..."
+  KRL_raiding_focus:0 "Are we pirates?"
+  KRL_capital_focus:0 "Capital focus"
   # Diplomacy
   KRL_our_own_way:0 "Our own way..."
   KRL_anti_soviet_sentiment:0 "Anti-Soviet Sentiment"

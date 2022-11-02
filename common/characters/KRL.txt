@@ -12,16 +12,48 @@ characters={
 		}
 	}
 
+	KRL_obec_legionarksa= {
+		name="Obec Legionářská"
+		portraits = {
+			civilian = {
+				large="GFX_portrait_KRL_KralovecLeader"
+			}
+		}
+		country_leader={
+			ideology=moderatism
+			id=0
+		}
+	}
+
 	KRL_radola_gajda= {
 		name="Radola Gajda"
 		portraits = {
 			civilian = {
 				large="GFX_portrait_KRL_Radola_Gajda"
+				small="GFX_idea_KRL_radola_gajda"
 			}
 		}
 		country_leader={
 			ideology=fascism_ideology
 			id=1
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = KRL_radola_gajda
+			allowed = {
+				original_tag = KRL
+			}
+			available = {
+				has_completed_focus = KRL_lessons_from_battle_of_baikal
+			}
+			traits = {
+				naval_theorist
+				capital_ships_expert
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
 	}
 }

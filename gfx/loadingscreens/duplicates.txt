@@ -1,0 +1,15 @@
+For replace vanilla and dlc loadingscreens, 1-6 is original, duplicates:
+
+load_7
+load_8
+load_9
+load_bba
+load_nsb
+load_nsb2
+load_botb
+load_lar
+load_tfv
+load_dod
+load_tiger
+load_mtg
+load_mtg_2

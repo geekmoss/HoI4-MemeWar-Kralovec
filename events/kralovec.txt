@@ -271,7 +271,7 @@ country_event = {
 			picture = GFX_portrait_KRL_Jan_Syrovy
 			expire = "1990.1.1"
 			ideology = moderatism
-			traits = { legionary }
+			traits = { legionary_leader }
 		}
 	}
 }
@@ -291,7 +291,14 @@ country_event = {
 			picture = GFX_portrait_KRL_Alois_Elias
 			expire = "1990.1.1"
 			ideology = moderatism
-			traits = { legionary }
+			traits = { legionary_leader }
+		}
+
+		hidden_effect = {
+			swap_ideas = {
+				remove_idea = KRL_legacy_of_legions_1
+				add_idea = KRL_legacy_of_legions_2
+			}
 		}
 	}
 }

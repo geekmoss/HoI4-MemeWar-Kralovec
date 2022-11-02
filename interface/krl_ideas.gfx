@@ -43,4 +43,10 @@ spriteTypes = {
 		name = GFX_idea_KRL_better_dead_than_red
 		texturefile = "gfx/interface/ideas/BetterDeadThanRedSpirit.dds"
 	}
+
+	# Advisors
+	spriteType = {
+		name = "GFX_idea_KRL_radola_gajda"
+		texturefile = "gfx/interface/ideas/RadolaAdvisor.dds"
+	}
 }

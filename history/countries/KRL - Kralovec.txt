@@ -5,6 +5,8 @@ set_technology = {
 	basic_train = 1
 }
 recruit_character = KRL_peoples_assembly
+recruit_character = KRL_obec_legionarksa
+recruit_character = KRL_radola_gajda
 
 
 if = {
@@ -34,6 +36,11 @@ set_politics = {
 	ruling_party = democratic
 	last_election = "1936.1.1"
 	elections_allowed = no
+}
+set_party_name = {
+	ideology = democratic
+	long_name = "Národní shromáždění"
+	name = "NS"
 }
 
 set_popularities = {

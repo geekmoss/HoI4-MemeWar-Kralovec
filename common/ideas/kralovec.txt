@@ -1,7 +1,6 @@
 ideas = {
 	country = {
-		KRL_legacy_of_legions = {
-
+		KRL_legacy_of_legions_1 = {
 			allowed = {
 				always = no
 			}
@@ -10,13 +9,35 @@ ideas = {
 				has_government = democratic
 			}
 
-			picture = KRL_idea_legacy_of_legions
+			picture = GFX_KRL_idea_legacy_of_legions
 
 			removal_cost = -1
 
 			modifier = {
 				war_support_factor = 0.1
 				send_volunteer_divisions_required = -0.90
+			}
+		}
+
+		KRL_legacy_of_legions_2 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			picture = GFX_KRL_idea_legacy_of_legions
+
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.1
+				send_volunteer_divisions_required = -0.90
+				send_volunteer_factor = 0.5
+				send_volunteers_tension = -0.5
+				generate_wargoal_tension = -0.3
 			}
 		}
 
@@ -290,7 +311,63 @@ ideas = {
 				defense_bonus_against = 0.15
 				breakthrough_bonus_against = 0.15
 				generate_wargoal_tension_against = -0.20
-				
+				communism_drift = -0.10
+			}
+		}
+
+		KRL_mil_academy = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			# TODO "picture ="
+
+			modifier = {
+				experience_gain_army_factor = 0.1
+			}
+		}
+
+		KRL_incoming_people_civil = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_constitutional_guarantees
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = 1.00
+			}
+		}
+
+		KRL_incoming_people_mil = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_constitutional_guarantees
+
+			removal_cost = -1
+
+			modifier = {
+				recruitable_population_factor = 0.20
+			}
+		}
+
+		KRL_incoming_people_combined = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_constitutional_guarantees
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = 1.00
+				recruitable_population_factor = 0.20
 			}
 		}
 	}
